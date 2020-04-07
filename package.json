@@ -21,7 +21,7 @@
     "url": "https://github.com/mekhron/mekhron.github.io/issues"
   },
   "homepage": "https://github.com/mekhron/mekhron.github.io#readme",
-  "devDependencies": {
+  "dependencies": {
     "express": "^4.17.1"
   },
   "engines": {
