@@ -2,9 +2,9 @@
   "name": "covid-stat-usa",
   "version": "1.0.0",
   "description": "Live covid-19 stat",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index"
+    "start": "node server"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/mekhron/mekhron.github.io#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0"
   },
   "engines": {
     "node": "12.13.0"
