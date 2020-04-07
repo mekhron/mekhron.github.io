@@ -108,7 +108,7 @@ fetch('https://covidtracking.com/api/states')
     // Create element and append to DOM
     let rowTotal = document.querySelector('#rowTotal')
     let colTotal = `<tr>
-                        <th>TOTAL</th>
+                        <th>TOTAL IN US</th>
                         <th>${positiveTotal}</th>
                         <th>${negativeTotal}</th>
                         <th>${hospitalizedTotal}</th>
