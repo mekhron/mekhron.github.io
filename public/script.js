@@ -3,7 +3,6 @@ fetch('https://covidtracking.com/api/states')
     return response.json();
   })
   .then((data) => {
-    let itemObj = {}
     data.forEach(item => {
         let rowsTbody = document.querySelector('#rowData')
         let rowTd = `<tr>
@@ -17,10 +16,9 @@ fetch('https://covidtracking.com/api/states')
                         <td class="death">${item.death}</td>
                     </tr>`
         rowsTbody.innerHTML += rowTd
-        //console.log(data)
     })
     return data
-    
+  // Count total for Columns
   }).then(data => {
     let positiveTotal = 0,
         negativeTotal = 0,
@@ -39,8 +37,7 @@ fetch('https://covidtracking.com/api/states')
         totalTestResultsTotal += row.totalTestResults
         deathTotal += row.death
     })
-    //console.log(positiveTotal, negativeTotal, hospitalizedTotal, recoveredTotal, totalTestResultsTotal, deathTotal)
-
+    // Create element and append to DOM
     let rowTotal = document.querySelector('#rowTotal')
     let colTotal = `<tr>
                         <th>TOTAL</th>
@@ -55,24 +52,22 @@ fetch('https://covidtracking.com/api/states')
     rowTotal.innerHTML += colTotal
   })
 
-
-let input, filter, table, tr, td, i, txtValue;
-
 function myFunction() {
     //Declare variables
-    input = document.querySelector("#searchInput");
-    filter = input.value.toUpperCase();
-    table = document.querySelector("#datatable");
-    tr = table.querySelectorAll("tr");
+    let input, filter, table, tr, td, i, txtValue
+    input = document.querySelector("#searchInput")
+    filter = input.value.toUpperCase()
+    table = document.querySelector("#datatable")
+    tr = table.querySelectorAll("tr")
   // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
+    for (let i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0]
         if (td) {
             txtValue = td.textContent || td.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                tr[i].style.display = "";
+                tr[i].style.display = ""
             } else {
-                tr[i].style.display = "none";
+                tr[i].style.display = "none"
             }
         } 
     }
