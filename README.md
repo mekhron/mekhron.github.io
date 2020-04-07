@@ -1,4 +1,4 @@
 # mekhron.github.io
 
-![Application screensot](/ipublic/screenshot.png)
+![Application screensot](/public/screenshot.png)
 Format: ![UI of Application](url)
