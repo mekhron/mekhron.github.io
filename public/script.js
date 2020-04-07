@@ -83,39 +83,39 @@ fetch('https://covidtracking.com/api/states')
     return data
   // Count total for Columns
   }).then(data => {
-    let positiveTotal = 0,
-        negativeTotal = 0,
-        hospitalizedTotal = 0,
-        onVentilatorCurrentlyTotal = 0,
-        recoveredTotal = 0,
-        totalTestResultsTotal = 0,
-        deathTotal = 0
+  let positiveTotal = 0,
+      negativeTotal = 0,
+      hospitalizedTotal = 0,
+      onVentilatorCurrentlyTotal = 0,
+      recoveredTotal = 0,
+      totalTestResultsTotal = 0,
+      deathTotal = 0
 
-    data.forEach(row => {
-        positiveTotal += row.positive
-        negativeTotal += row.negative
-        hospitalizedTotal += row.hospitalized
-        onVentilatorCurrentlyTotal += row.onVentilatorCurrently
-        recoveredTotal += row.recovered
-        totalTestResultsTotal += row.totalTestResults
-        deathTotal += row.death
-    })
-    // Create element and append to DOM
-    let rowTotal = document.querySelector('#rowTotal')
-    let colTotal = `<tr>
-                        <th>TOTAL</th>
-                        <th>${positiveTotal}</th>
-                        <th>${negativeTotal}</th>
-                        <th>${hospitalizedTotal}</th>
-                        <!--<th>${onVentilatorCurrentlyTotal}-->
-                        <th>${recoveredTotal}</th>
-                        <th>${totalTestResultsTotal}</th>
-                        <th>${deathTotal}</th>
-                    </tr>`
-    rowTotal.innerHTML += colTotal
+  data.forEach(row => {
+      positiveTotal += row.positive
+      negativeTotal += row.negative
+      hospitalizedTotal += row.hospitalized
+      onVentilatorCurrentlyTotal += row.onVentilatorCurrently
+      recoveredTotal += row.recovered
+      totalTestResultsTotal += row.totalTestResults
+      deathTotal += row.death
   })
+  // Create element and append to DOM
+  let rowTotal = document.querySelector('#rowTotal')
+  let colTotal = `<tr>
+                      <th>TOTAL</th>
+                      <th>${positiveTotal}</th>
+                      <th>${negativeTotal}</th>
+                      <th>${hospitalizedTotal}</th>
+                      <!--<th>${onVentilatorCurrentlyTotal}-->
+                      <th>${recoveredTotal}</th>
+                      <th>${totalTestResultsTotal}</th>
+                      <th>${deathTotal}</th>
+                  </tr>`
+  rowTotal.innerHTML += colTotal
+})
 
-function myFunction() {
+function inputSearch() {
     //Declare variables
     let input, filter, table, tr, td, i, txtValue
     input = document.querySelector("#searchInput")
