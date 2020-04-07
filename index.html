@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js" defer></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">COVID-19 USA Stat</a>
+            </div>
+            <div class="nav-content">
+                <!--ul class="tabs tabs-transparent">
+                    <li class="tab"><a href="#test1">Test 1</a></li>
+                    <li class="tab"><a class="active" href="#test2">Test 2</a></li>
+                    <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
+                    <li class="tab"><a href="#test4">Test 4</a></li>
+                </ul-->
+            </div>
+        </nav>    
+
+        <div class="row">
+            <div class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" id="searchInput" onkeyup="myFunction()" class="autocomplete">
+                  <label for="autocomplete-input">Search</label>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <table id="datatable">
+            <thead id="rowTitle">
+                <tr>
+                    <th>State</th>
+                    <th>Positive</th>
+                    <th>Negative</th>
+                    <th>Hospitalized</th>
+                    <!--<th>On ventilator</th>-->
+                    <th>Recovered</th>
+                    <th>Total tests</th>
+                    <th>Death</th>
+                </tr>
+            </thead>
+            <tbody id="rowData">
+                <!--here is data from API-->
+            </tbody>
+            <thead id="rowTotal">
+
+            </thead>
+        </table>
+    </div>
+</body>
+</html>
