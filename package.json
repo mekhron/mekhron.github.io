@@ -1,0 +1,24 @@
+{
+  "name": "covid-stat-usa",
+  "version": "1.0.0",
+  "description": "Live covid-19 stat",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mekhron/mekhron.github.io.git"
+  },
+  "keywords": [
+    "covid-19",
+    "stat",
+    "api"
+  ],
+  "author": "Mekhron Khusainov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mekhron/mekhron.github.io/issues"
+  },
+  "homepage": "https://github.com/mekhron/mekhron.github.io#readme"
+}
