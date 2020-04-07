@@ -65,9 +65,10 @@ fetch('https://covidtracking.com/api/states')
     return response.json()
   })
   .then(data => {
-    return data.sort((a,b) => b.positive-a.positive); //sort by num of positive cases
+    return data.sort((a,b) => b.positive-a.positive) //sort by num of positive cases
   })
   .then((data) => {
+    //console.log(data)
     data.forEach(item => {
         let fullState = fullStates[item.state] + ` (${item.state})`
         let rowsTbody = document.querySelector('#rowData')
