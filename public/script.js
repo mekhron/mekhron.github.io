@@ -66,7 +66,7 @@ fetch('https://covidtracking.com/api/states')
   })
   .then((data) => {
     data.forEach(item => {
-        let fullState = fullStates[`${item.state}`] + ' ' + '('+item.state+')'
+        let fullState = fullStates[item.state] + ` (${item.state})`
         let rowsTbody = document.querySelector('#rowData')
         let rowTd = `<tr>
                         <td class="state">${fullState}</td>
