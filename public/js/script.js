@@ -127,7 +127,7 @@ function inputSearch() {
     filter = input.value.toUpperCase()
     table = document.querySelector("#datatable")
     tr = table.querySelectorAll("tr")
-  // Loop through all table rows, and hide those who don't match the search query
+    // Loop through all table rows, and hide those who don't match the search query
     for (let i = 0; i < tr.length; i++) {
         td = tr[i].querySelector("td")
         if (td) {
