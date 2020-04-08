@@ -120,6 +120,33 @@ fetch('https://covidtracking.com/api/states')
     rowTotal.innerHTML += colTotal
 })
 
+const requiredFields = [
+  "positive",
+  "negative",
+  "hospitalized",
+  "onVentilatorCurrently",
+  "recovered",
+  "totalTestResults",
+  "death"
+]
+
+// function calcColumnTotal(data) {
+//   let colTotal = {};
+
+//   data.forEach(row => {
+//     requiredFields.forEach(key => {
+//       if (colTotal[key]) {
+//         colTotal[key] += row[key]
+//       } else {
+//         colTotal[key] = row[key]
+//       }
+//     })
+//   })
+
+//   return colTotal
+// }
+
+
 function inputSearch() {
     //Declare variables
     let input, filter, table, tr, td, i, txtValue
