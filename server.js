@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const time = 1000*60*29
-const appName = 'http://localhost:'+PORT
+const appName = 'https://coronavirus-us-stats.herokuapp.com'
 
 
 // Serve Static Assets
@@ -21,7 +21,7 @@ setInterval(() => {
             console.log(status)
         })
         .catch(res => {
-            console.log("Booo")
+            console.log(res.message)
         })
 }, time)
 
