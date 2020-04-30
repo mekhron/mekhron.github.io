@@ -60,7 +60,7 @@ fullStates = {
   "WY": "Wyoming"
 }
 
-fetch('https://covidtracking.com/api/states')
+fetch('https://covidtracking.com/api/v1/states/current.json')
   .then((response) => {
     return response.json()
   })
