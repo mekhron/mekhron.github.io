@@ -5,7 +5,7 @@ const fetch = require("node-fetch")
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const time = 1000*60*60*24
+const time = 1000*60*60
 const appName = 'https://coronavirus-us-stats.herokuapp.com/favicon.ico'
 
 
